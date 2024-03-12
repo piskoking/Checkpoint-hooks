@@ -1,5 +1,5 @@
 import React from 'react';
-import MovieCard from './MovieCard';  
+import MovieCard from './MovieCard';
 
 
 
@@ -10,15 +10,17 @@ const MovieList = ({ movies }) => {
     return <div>Aucun film disponible</div>;
   }
 
-  return (
+  return (   
     <div className="movie-list">
-      {MovieCard.map((movie) => (
-        <MovieCard key={movie.title} movie={movie}/>
-      ))}
+      {movies.map((movie) => (
+        <MovieCard key={movie.title}  description={movie.description} posterURL={movie.posterURL} note={movie.note}  />
+        
+      ))
+      }
     </div>
   );
 };
 
 
 
-      export default MovieList;
+export default MovieList;

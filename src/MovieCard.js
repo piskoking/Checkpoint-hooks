@@ -1,15 +1,15 @@
 import React from 'react';
 
-const MovieCard = ({ movie }) => {
+const MovieCard = (props) => {
+  const {posterURL ,title ,description,note} = props
 
   return (
     <div className="movie-card">
-      <img src={movie.posterURL} alt="" />
+      <img src={posterURL} alt="" />
       <div className="movie-info">
-        <h3>{movie.title}</h3>
-        <p> {movie.description}</p>
-        <p> Rating: {movie.note}</p>
-       
+        <h3>{title}</h3>
+        <p> {description}</p>
+        <p> Rating: {note}</p>
       </div>
     </div>
   );
